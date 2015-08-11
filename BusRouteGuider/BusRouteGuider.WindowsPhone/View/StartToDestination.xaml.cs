@@ -25,13 +25,17 @@ namespace BusRouteGuider
     /// </summary>
     public sealed partial class StartToDestination : Page
     {
-        BusRouteGuider.ViewModel.SearchRoute processor;
+        //BusRouteGuider.ViewModel.SearchRoute processor;
+        //BusRouteGuider.ViewModel.SearchRoute processor;
+       // Dictionary<String, Location> dic;
         public StartToDestination()
         {
+            Debug.WriteLine("Start to destination reached");
             this.InitializeComponent();
-            HardwareButtons.BackPressed += HardwareButtons_BackPressed; 
-            processor = new ViewModel.SearchRoute();
-            
+            HardwareButtons.BackPressed += HardwareButtons_BackPressed;
+            //processor = new ViewModel.SearchRoute();
+            //processor = processor1;
+           // this.dic = dic;
             /*
             while(comboStart.Items.Count==0 && count <100){
                 this.fillCombo();
@@ -39,13 +43,14 @@ namespace BusRouteGuider
             }*/
         }
 
-        private void fillCombo()
+        //Fill the combo boxes for start location and destination
+        private void fillCombo(Dictionary<String,Location> dic)
         {
             int i = 0;
             comboStart.Items.Clear();
             comboEnd.Items.Clear();
             
-            foreach (Location loc in processor.getAllLocations().Values){
+            foreach (Location loc in dic.Values){
                comboStart.Items.Add(loc.getName());
                //Debug.WriteLine("Added to ComboStart");
                comboEnd.Items.Add(loc.getName());
@@ -63,13 +68,15 @@ namespace BusRouteGuider
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Dictionary<String, Location> dic = e.Parameter as Dictionary<String, Location>;
             Debug.WriteLine("**********************on navigated to got called");
-            processor.start();
-            processor.loadData();
-            //this.fillCombo();
+            //processor.start();
+          //  processor.loadData();
+            this.fillCombo(dic);
             
         }
 
+        //Set the functionality for the phone's back button to move one page back
         void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;
@@ -82,6 +89,7 @@ namespace BusRouteGuider
 
         private void Menu_ItemClick(object sender, ItemClickEventArgs e)
         {
+            //return to main page
             this.Frame.Navigate(typeof(MainPage));
         }
 

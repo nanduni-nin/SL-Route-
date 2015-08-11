@@ -65,7 +65,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Items" />
     </RootType>
+    <RootType FullName="System.String" />
     <RootType FullName="BusRouteGuider.CurrentLocationToDestination" />
     <RootType FullName="BusRouteGuider.Help" />
     <RootType FullName="Windows.UI.Xaml.Documents.Run">

@@ -44,19 +44,22 @@ namespace BusRouteGuider
             Debug.WriteLine("**********************on navigated to got called");
             processor.start();
             processor.loadData();
-            //this.fillList();
+            this.fillList();
         }
 
-        public void fillList() {
-            
+        //Fill the list box from the data from the data file
+        public void fillList() {            
             foreach(String s in processor.getAllRoutes().Keys)
             {
-                String detail = s + " | " + (processor.getAllRoutes())[s].getPath();
-                ListRoutes.Items.Add(detail);
+               // String detail = s + " | " + (processor.getAllRoutes())[s].getPath();
+              //  ListRoutes.Items.Add(detail);
+                Debug.WriteLine("List filled **********");
+
             }
             Debug.WriteLine("List filled");
         }
 
+        //Set the functionality for the phone's back button to move one page back
         void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
         {
             Frame rootFrame = Window.Current.Content as Frame;

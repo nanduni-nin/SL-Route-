@@ -23,17 +23,16 @@ namespace BusRouteGuider
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        Dictionary<String, Location> dic;
         public MainPage()
         {
             this.InitializeComponent();
             this.NavigationCacheMode = NavigationCacheMode.Required;
-            
+            BusRouteGuider.ViewModel.SearchRoute processor = new ViewModel.SearchRoute();
+             dic = processor.getAllLocations();
         }
 
-        private void fillCombo()
-        {
-            
-        }
+        
         
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
@@ -44,7 +43,8 @@ namespace BusRouteGuider
 
         private void StartToDestination_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(StartToDestination));
+            
+            this.Frame.Navigate(typeof(StartToDestination),dic);
         }
 
         private void CurrentLocationToDestination_ItemClick(object sender, ItemClickEventArgs e)

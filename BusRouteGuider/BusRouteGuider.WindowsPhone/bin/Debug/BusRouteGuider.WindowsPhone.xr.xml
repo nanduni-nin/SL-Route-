@@ -50,14 +50,16 @@
       <RootProperty Name="FontStyle" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
+      <RootProperty Name="Background" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="Items" />
+      <RootProperty Name="FontFamily" />
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="FontWeight" />
     </RootType>
-    <RootType FullName="System.String" />
     <RootType FullName="BusRouteGuider.ShowRoutes" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -68,6 +70,7 @@
     </RootType>
     <RootType FullName="BusRouteGuider.RoutesViaLocation" />
     <RootType FullName="BusRouteGuider.Help" />
+    <RootType FullName="System.String" />
     <RootType FullName="BusRouteGuider.CurrentLocationToDestination" />
     <RootType FullName="Windows.UI.Xaml.Controls.ColumnDefinition">
       <RootProperty Name="Width" />
