@@ -51,7 +51,15 @@ namespace BusRouteGuider
             return routeOut;
         }
 
-        
+        public Boolean routeInContainsLocation(String location) {
+            foreach (Location loc in routeIn) {
+                if (loc.getName().Equals(location)) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         public LinkedListNode<Location> getRouteInStartLocation() {
             return routeIn.First;
         }

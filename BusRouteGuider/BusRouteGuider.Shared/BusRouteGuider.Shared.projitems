@@ -17,6 +17,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Model\Location.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Model\Route.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModel\Algorithm.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModel\SearchRoute.cs" />
   </ItemGroup>
   <ItemGroup>

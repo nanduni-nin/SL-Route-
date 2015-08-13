@@ -33,6 +33,16 @@ namespace BusRouteGuider
         return routes;
     }
 
+    //public Route getRoute(int i) {
+    //    //Get the ith element of the linked list
+    //    Route mark = (Route)(routes.First);
+    //    for (int p = 0; p < i; p++)
+    //    {
+    //        mark = mark.Next;
+    //    }
+    //    return mark;
+    //}
+
     public void printData() {        
         Debug.WriteLine("Location: " + name);
         foreach (Route route in routes) {

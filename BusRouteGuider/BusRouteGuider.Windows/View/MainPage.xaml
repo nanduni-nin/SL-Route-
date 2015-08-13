@@ -17,39 +17,67 @@
 
 
         <GridView x:Name="StartToDestination"  Height="200" Width="200" BorderBrush="White" BorderThickness="2" Background="#FF0E4944" IsItemClickEnabled="True" ItemClick="StartToDestination_ItemClick" Margin="717,228,449,340" >
-            <TextBlock x:Name="TxtStartToDestination" Margin="20.167,60.167,3.167,4.167"  Foreground="White" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="30" Height="68" Width="154" >
-            	<Run Text="  Start to "/>
+            <TextBlock x:Name="TxtStartToDestination"  Foreground="White" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="30" Height="192" Width="186" >
+            	<Run Text="  "/>
             	<LineBreak/>
             	<Run/>
             	<LineBreak/>
-            	<Run Text="Destination"/>
+            	<Run Text="      "/>
+            	<LineBreak/>
+            	<Run Text="      Start to "/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="   Destination"/>
             </TextBlock>
         </GridView>
 
 
         <GridView x:Name="CurrentLocationToDestination" BorderBrush="White" BorderThickness="2" Margin="990,228,176,0" Height="200" Width="200" VerticalAlignment="Top" Background="#FF0E4944" IsItemClickEnabled="True" ItemClick="CurrentLocationToDestination_ItemClick">
-            <TextBlock x:Name="TxtCurrentLocationToDestination" Foreground="White" Margin="20.167,60.167,3.167,4.167"  Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="30" Height="120" Width="153" >
-            	<Run Text="  Current"/>
+            <TextBlock x:Name="TxtCurrentLocationToDestination" Foreground="White"  Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="30" Height="196" Width="186" >
+            	<Run/>
             	<LineBreak/>
             	<Run/>
             	<LineBreak/>
-            	<Run Text=" Location to"/>
+            	<Run Text="     Current"/>
             	<LineBreak/>
-            	<Run Text=" Destination"/>
+            	<Run Text=" "/>
+            	<LineBreak/>
+            	<Run Text="   Location to"/>
+            	<LineBreak/>
+            	<Run Text=" "/>
+            	<LineBreak/>
+            	<Run Text="   Destination"/>
             </TextBlock>
         </GridView>
 
-        <GridView x:Name="RouteNumber" Margin="717,494,449,0" BorderBrush="White" BorderThickness="2" Height="200" Width="200" VerticalAlignment="Top" Background="#FF0E4944" IsItemClickEnabled="True" ItemClick="RouteNumber_ItemClick">
-            <TextBlock x:Name="TxtRouteNumber" Text="All Routes" Foreground="White" Margin="20.167,60.167,3.167,4.167"  Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="30" />
-        </GridView>
-
-        <GridView x:Name="BusesAtCurrentLocation" Margin="990,494,176,0" BorderBrush="White" BorderThickness="2" Height="200" Width="200" VerticalAlignment="Top" Background="#FF0E4944" IsItemClickEnabled="True" ItemClick="BusesAtCurrentLocation_ItemClick" Foreground="#FFF7F7F7">
-            <TextBlock x:Name="TxtBusesAtLocation" Foreground="White" Style="{ThemeResource BaseTextBlockStyle}" Margin="20.167,60.167,3.167,4.167"  FontFamily="Cambria" FontSize="30" Height="100" Width="166" >
-            	<Run Text=" Routes at "/>
+        <GridView x:Name="AllRoutes" Margin="717,494,449,0" BorderBrush="White" BorderThickness="2" Height="200" Width="200" VerticalAlignment="Top" Background="#FF0E4944" IsItemClickEnabled="True" ItemClick="AllRoutes_ItemClick">
+            <TextBlock x:Name="TxtRouteNumber" Foreground="White"  Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="30" Height="192" Width="186" >
+            	<Run/>
             	<LineBreak/>
             	<Run/>
             	<LineBreak/>
-            	<Run Text="a Location"/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="    All Routes"/>
+            </TextBlock>
+        </GridView>
+
+        <GridView x:Name="BusesAtCurrentLocation" Margin="990,494,176,0" BorderBrush="White" BorderThickness="2" Height="200" Width="200" VerticalAlignment="Top" Background="#FF0E4944" IsItemClickEnabled="True" ItemClick="BusesAtCurrentLocation_ItemClick" Foreground="#FFF7F7F7">
+            <TextBlock x:Name="TxtBusesAtLocation" Foreground="White" Style="{ThemeResource BaseTextBlockStyle}"  FontFamily="Cambria" FontSize="30" Height="196" Width="186" >
+            	<Run Text=" "/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="     Routes at "/>
+            	<LineBreak/>
+            	<Run/>
+            	<LineBreak/>
+            	<Run Text="    a Location"/>
             </TextBlock>
         </GridView>
 

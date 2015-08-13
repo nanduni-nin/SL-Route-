@@ -23,23 +23,28 @@ namespace BusRouteGuider
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        //Loaded data from the data file are stored in a dictionary
         Dictionary<String, Location> dic;
+        Dictionary<String, Route> routes;
+
         public MainPage()
         {
+            //Create the layout for GUI
             this.InitializeComponent();
             this.NavigationCacheMode = NavigationCacheMode.Required;
+            //Create an object of SearchRoute class
             BusRouteGuider.ViewModel.SearchRoute processor = new ViewModel.SearchRoute();
-             dic = processor.getAllLocations();
+            //Get the dictionary of Location objects
+            dic = processor.getAllLocations();
+            //Get the dictionary of Route objects
+            routes = processor.getAllRoutes();
         }
-
-        
         
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
         /// <param name="e">Event data that describes how this page was reached.
         /// This parameter is typically used to configure the page.</param>
-
 
         private void StartToDestination_ItemClick(object sender, ItemClickEventArgs e)
         {
@@ -57,9 +62,9 @@ namespace BusRouteGuider
             this.Frame.Navigate(typeof(RoutesViaLocation));
         }
 
-        private void RouteNumber_ItemClick(object sender, ItemClickEventArgs e)
+        private void AllRoutes_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(ShowRoutes));
+            this.Frame.Navigate(typeof(ShowRoutes),routes);
         }
        
 

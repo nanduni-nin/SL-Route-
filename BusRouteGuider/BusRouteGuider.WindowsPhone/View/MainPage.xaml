@@ -27,7 +27,7 @@
             </Border>
         </GridView>
 
-        <GridView x:Name="RouteNumber" Margin="35,480,43.333,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True" ItemClick="RouteNumber_ItemClick">
+        <GridView x:Name="AllRoutes" Margin="35,480,43.333,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True" ItemClick="AllRoutes_ItemClick">
             <Border BorderThickness="2" BorderBrush="White" Height="150" Width="150">
                 <TextBlock x:Name="TxtRouteNumber" Text="All Routes" Foreground="White" Margin="22.333,46.333,15.333,56.333" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="23" />
             </Border>

@@ -15,6 +15,8 @@ using Windows.UI.Xaml.Media;
 using System.Diagnostics;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
+using Windows.UI.Popups;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -25,38 +27,42 @@ namespace BusRouteGuider
     /// </summary>
     public sealed partial class StartToDestination : Page
     {
-        //BusRouteGuider.ViewModel.SearchRoute processor;
-        //BusRouteGuider.ViewModel.SearchRoute processor;
-       // Dictionary<String, Location> dic;
+        Dictionary<String, Location> dic;
+        BusRouteGuider.ViewModel.Algorithm process;
+
+
         public StartToDestination()
         {
+            //Navigation achieved
             Debug.WriteLine("Start to destination reached");
+            //Create the GUI
             this.InitializeComponent();
+            //Set functionality for the phone's back buttons
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
-            //processor = new ViewModel.SearchRoute();
-            //processor = processor1;
-           // this.dic = dic;
-            /*
-            while(comboStart.Items.Count==0 && count <100){
-                this.fillCombo();
-                count++;
-            }*/
+            //Create an object from Algorithm Class
+            process = new ViewModel.Algorithm();
         }
 
         //Fill the combo boxes for start location and destination
         private void fillCombo(Dictionary<String,Location> dic)
         {
-            int i = 0;
+            //Clear items of the combo lists for clearing any buffers
             comboStart.Items.Clear();
             comboEnd.Items.Clear();
+
+            //The list of the combo box should appear in alphabetical order
+            SortedSet<string> keySet = new SortedSet<string>();
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in dic.Keys){
+                keySet.Add(key);
+            }
             
-            foreach (Location loc in dic.Values){
-               comboStart.Items.Add(loc.getName());
-               //Debug.WriteLine("Added to ComboStart");
-               comboEnd.Items.Add(loc.getName());
-               Debug.WriteLine("Added to ComboEnd" + comboEnd.Items.ElementAt(i));
-               i++;
-           }
+            //Fill the combo boxes
+            foreach (String key in keySet){
+                comboStart.Items.Add(key);
+                comboEnd.Items.Add(key);
+            }
             Debug.WriteLine("Combo filled");
            
         }
@@ -70,10 +76,8 @@ namespace BusRouteGuider
         {
             Dictionary<String, Location> dic = e.Parameter as Dictionary<String, Location>;
             Debug.WriteLine("**********************on navigated to got called");
-            //processor.start();
-          //  processor.loadData();
+            this.dic = dic;
             this.fillCombo(dic);
-            
         }
 
         //Set the functionality for the phone's back button to move one page back
@@ -92,6 +96,27 @@ namespace BusRouteGuider
             //return to main page
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private async void searchBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if ((comboStart.SelectedItem.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+            {
+                MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination");
+                await msgbox.ShowAsync();
+                return;
+            }
+            else {
+                process.getRoutes(comboStart.SelectedItem.ToString(), comboEnd.SelectedItem.ToString(), dic, true);
+            }
+        }
+
+        private void cancelBtn_Click(object sender, RoutedEventArgs e)
+        {
+            //return to main page
+            this.Frame.Navigate(typeof(MainPage));
+        }
+
+        
 
         
 

@@ -17,15 +17,9 @@ namespace BusRouteGuider.ViewModel
     {
         private static Dictionary<String, Route> routes;            //Stores all the available routes
         private static Dictionary<String, Location> locations;      //Stores all the available locations
-        //private static SortedSet<string> set;                       
-        //private static int minCount;
-        //private static int maxCount;
-        private static String[] path;
-
+        
         //Constructor for the class
         public SearchRoute() {            
-            //minCount = 5;
-            //maxCount = 0;
             start();
         }
 
@@ -34,15 +28,12 @@ namespace BusRouteGuider.ViewModel
             routes = new Dictionary<String, Route>();
             locations = new Dictionary<String, Location>();
             loadData();
-            //path = new String[500];
-            //set = new SortedSet<string>(); 
             Debug.WriteLine("++++++++++++++++++++++++");
         }
 
 
         //Loading data from data file
         public async void loadData() {
-            //int p =0;
             Debug.WriteLine("Load Data Came");
             String[] lines;
             String[] temp;
@@ -65,7 +56,7 @@ namespace BusRouteGuider.ViewModel
             //route = processInput(temp[2], route);
             //routes.Add(temp[0], route);
 
-
+            //Clear the buffers
             routes.Clear();
             //Read line by line to get the route number and the locations through the route
             for (int i = 0; i < lines.Length; i++)
@@ -76,14 +67,15 @@ namespace BusRouteGuider.ViewModel
                 route = processInput(temp[1], route);
                 route = processInput(temp[2], route);
                 
+                //if else statements for preventing any exceptions due to duplicate key values
                 if (!routes.ContainsKey(temp[0]))
                 {
                     routes.Add(temp[0], route);
-                    Debug.WriteLine("added "+temp[0]);
+                   // Debug.WriteLine("added "+temp[0]);
                 }
                 else
                 {
-                    Debug.WriteLine("not"+ temp[0]);
+                   // Debug.WriteLine("not"+ temp[0]);
                 }
             }
 

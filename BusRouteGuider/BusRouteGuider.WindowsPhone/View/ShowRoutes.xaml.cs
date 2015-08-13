@@ -24,14 +24,14 @@ namespace BusRouteGuider
     /// </summary>
     public sealed partial class ShowRoutes : Page
     {
-        BusRouteGuider.ViewModel.SearchRoute processor;
-
         public ShowRoutes()
         {
+            //Navigation achieved
+            Debug.WriteLine("Show routes reached");
+            //Create the GUI
             this.InitializeComponent();
+            //Set functionality for the phone's back buttons
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
-            processor = new ViewModel.SearchRoute();
-
         }
 
         /// <summary>
@@ -41,20 +41,18 @@ namespace BusRouteGuider
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Dictionary<String, Route> dic = e.Parameter as Dictionary<String, Route>;
             Debug.WriteLine("**********************on navigated to got called");
-            processor.start();
-            processor.loadData();
-            this.fillList();
+            this.fillList(dic);
         }
 
         //Fill the list box from the data from the data file
-        public void fillList() {            
-            foreach(String s in processor.getAllRoutes().Keys)
+        private void fillList(Dictionary<String, Route> dic)
+        {            
+            foreach(String s in dic.Keys)
             {
-               // String detail = s + " | " + (processor.getAllRoutes())[s].getPath();
-              //  ListRoutes.Items.Add(detail);
-                Debug.WriteLine("List filled **********");
-
+                String detail = s + " | " + dic[s].getPath();
+                ListRoutes.Items.Add(detail);
             }
             Debug.WriteLine("List filled");
         }
