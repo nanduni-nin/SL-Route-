@@ -73,9 +73,15 @@ namespace BusRouteGuider
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private void btnCancel_Click(object sender, RoutedEventArgs e)
+
+        private void cancelBtn_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
+        }
+
+        private void Help_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Help));
         }
     }
 

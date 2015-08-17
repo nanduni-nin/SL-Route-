@@ -14,14 +14,15 @@
         <GridView x:Name="Help" Height="70" Margin="0,90,0,0" VerticalAlignment="Top" Background="#FF67C9C1" Foreground="#FFFBF7F7">
         </GridView>
 
-        <TextBlock x:Name="TxtBlckHelp" HorizontalAlignment="Left" Text="Help" Margin="966,105,0,0" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="30" Height="44" Width="92" VerticalAlignment="Top"/>
-        <TextBlock x:Name="TxtBlckMap" HorizontalAlignment="Left" Margin="270,105,0,0" TextWrapping="Wrap" Text="Map" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="30" VerticalAlignment="Top"/>
+        <TextBlock x:ConnectionId='2' x:Name="TxtBlckHelp" HorizontalAlignment="Left" Text="Help" Margin="966,105,0,0" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="30" Height="44" Width="92" VerticalAlignment="Top"                            />
+        <TextBlock x:ConnectionId='3' x:Name="TxtBlckMap" HorizontalAlignment="Left" Margin="270,105,0,0" TextWrapping="Wrap" Text="Map" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="30" VerticalAlignment="Top"                           />
         <TextBlock HorizontalAlignment="Left" Margin="466,203,0,0" TextWrapping="Wrap" Text="Available Routes" VerticalAlignment="Top" Height="68" FontFamily="Cambria" FontSize="50" Width="393" FontWeight="Bold" />
 
         <Button Content="Cancel" Background="#FF0F897F" FontSize="30" HorizontalAlignment="Left" Margin="604,677,0,0" VerticalAlignment="Top" Width="142"/>
 
         <Image HorizontalAlignment="Left" Height="78" Margin="10,680,0,0" VerticalAlignment="Top" Width="412" Source="ms-appx:///Assets/title.png"/>
-        <ListBox x:Name="ListRoutes" Background="#FF67C9C1" HorizontalAlignment="Left" Height="372" Margin="38,284,0,0" VerticalAlignment="Top" Width="1292" FontSize="20" FontWeight="Bold"/>
+        <ListBox x:Name="ListRoutes" ScrollViewer.HorizontalScrollMode="Enabled"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Background="#FF67C9C1" HorizontalAlignment="Left" Height="372" Margin="38,284,0,0" VerticalAlignment="Top" Width="1292" FontSize="20" FontWeight="Bold">
+        </ListBox>
     </Grid>
 </Page>
 

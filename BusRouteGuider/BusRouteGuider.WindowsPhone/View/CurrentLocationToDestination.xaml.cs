@@ -54,6 +54,11 @@ namespace BusRouteGuider
             this.Frame.Navigate(typeof(MainPage));
         }
 
+        private void Help_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Help));
+        }
+
         
     }
 }

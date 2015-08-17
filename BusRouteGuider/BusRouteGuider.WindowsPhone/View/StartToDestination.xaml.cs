@@ -16,6 +16,7 @@ using System.Diagnostics;
 using Windows.UI.Xaml.Navigation;
 using System.Collections.ObjectModel;
 using Windows.UI.Popups;
+using System.Windows;
 
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
@@ -97,19 +98,7 @@ namespace BusRouteGuider
             this.Frame.Navigate(typeof(MainPage));
         }
 
-        private async void searchBtn_Click(object sender, RoutedEventArgs e)
-        {
-            if ((comboStart.SelectedItem.ToString()).Equals(comboEnd.SelectedItem.ToString()))
-            {
-                MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination");
-                await msgbox.ShowAsync();
-                return;
-            }
-            else {
-                process.getRoutes(comboStart.SelectedItem.ToString(), comboEnd.SelectedItem.ToString(), dic, true);
-            }
-        }
-
+       
         private void cancelBtn_Click(object sender, RoutedEventArgs e)
         {
             //return to main page
@@ -117,10 +106,52 @@ namespace BusRouteGuider
         }
 
         
+        private void Map_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //return to map
+            this.Frame.Navigate(typeof(Map));
+        }
 
-        
+        private async void AllRoutesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (comboStart.SelectedItem == null || comboEnd.SelectedItem == null)
+            {
+                MessageDialog msgbox = new MessageDialog("Please fill all the fields.","ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            else if ((comboStart.SelectedItem.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+            {
+                MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }            
+            else
+            {
+                process.getRoutes(comboStart.SelectedItem.ToString(), comboEnd.SelectedItem.ToString(), dic, true);
+            }
+        }
 
-        
+        private async void BestRoutesBtn_Click(object sender, RoutedEventArgs e)
+        {
+            if (comboStart.SelectedItem == null || comboEnd.SelectedItem == null)
+            {
+                MessageDialog msgbox = new MessageDialog("Please fill all the fields.", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            else if ((comboStart.SelectedItem.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+            {
+
+                MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            else
+            {
+                process.getRoutes(comboStart.SelectedItem.ToString(), comboEnd.SelectedItem.ToString(), dic, false);
+            }
+        }
 
         
     }

@@ -59,12 +59,22 @@ namespace BusRouteGuider
 
         private void BusesAtCurrentLocation_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(RoutesViaLocation));
+            this.Frame.Navigate(typeof(RoutesViaLocation),dic);
         }
 
         private void AllRoutes_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(ShowRoutes),routes);
+        }
+
+        private void Help_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Help));
+        }
+
+        private void Menu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
         }
        
 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Windows.UI.Popups;
 using System.Diagnostics;
+using System.Collections;
 
 
 namespace BusRouteGuider.ViewModel
@@ -11,10 +12,47 @@ namespace BusRouteGuider.ViewModel
     {
         private SortedSet<String> tree;
         Dictionary<String, Location> locations;
+        private int minCount;
+        private int maxCount;
 
         public Algorithm() {
             tree = new SortedSet<string>();
             locations = new Dictionary<string, Location>();
+            minCount = 5;
+            maxCount = 0;
+        }
+
+        public async void getBusNumbers(String start, Dictionary<String, Location> dic)
+        {
+            //The list stores all the buses that will pass through this location
+            List<String> series = new List<String>();
+            //Get the object of the user defined location
+            Location toFind = dic[start];
+            //Traverse through routes that contain this location
+            foreach (Route r in toFind.getRoutes()) {
+                //If a route found, add to the list
+                series.Add(r.getRouteNumber());
+            }
+
+            if (series.Count == 0) {
+                //Create a message pop up box to isplay the results
+                MessageDialog msgbox1 = new MessageDialog("Route too long", "Search Results");
+                await msgbox1.ShowAsync();
+                return;
+            }
+
+            //Display the results
+            String t = "The buses that pass this location are," + Environment.NewLine;
+            foreach (String s in series)
+            {
+                t = t + Environment.NewLine + Environment.NewLine +"       "+ s;
+            }
+
+            //Create a message pop up box to isplay the results
+            MessageDialog msgbox2 = new MessageDialog(t,"Search Results");
+            await msgbox2.ShowAsync();
+            return;
+
         }
 
         public async void getRoutes(String start, String end, Dictionary<String, Location> dic, Boolean searchAll) {
@@ -23,18 +61,91 @@ namespace BusRouteGuider.ViewModel
 
             if (searchAll) {
                 String t = "";
-                int k=0;
                 foreach (String s in tree) {
-                    k++;
-                    t = t + s + Environment.NewLine + Environment.NewLine ;
+                    t = t + Environment.NewLine + s + Environment.NewLine;
                 }
-                
-                //Debug.WriteLine("0000000000000000000000" + k);
-
-                MessageDialog msgbox = new MessageDialog(t);
-                await msgbox.ShowAsync();
+                MessageDialog msgbox1 = new MessageDialog(t, "Search Results");
+                await msgbox1.ShowAsync();
                 return;
             }
+
+            LinkedList<String> selected1 = new LinkedList<String>();
+            LinkedList<String> selected2 = new LinkedList<String>();
+            LinkedList<String> selected3 = new LinkedList<String>();
+            LinkedList<String> selected4 = new LinkedList<String>();
+
+            foreach (String s in tree) {
+                int count = 0;
+                String[] array = s.Split(' ');
+                foreach(String h in array){
+                    if (System.Text.RegularExpressions.Regex.IsMatch(h, "^[0-9]+$", System.Text.RegularExpressions.RegexOptions.IgnoreCase))
+                    {
+                        count++;
+                    }
+                }
+                               
+                switch (count) {
+                    case 1:
+                        selected1.AddLast(s);
+                        break;
+                    case 2:
+                        selected2.AddLast(s);
+                        break;
+                    case 3:
+                        selected3.AddLast(s);
+                        break;
+                    case 4:
+                        selected4.AddLast(s);
+                        break;
+                    default:
+                        break;
+            }
+            minCount = Math.Min(count, minCount);
+            maxCount = Math.Max(count, maxCount);
+        }
+
+        //Debug.WriteLine("Min is:" + minCount);
+        String displayText;
+        switch (minCount) {
+            case 0:
+                displayText = "No Root Found";
+                break;
+            case 1:
+                displayText = "";
+                foreach(String s in selected1){
+                    displayText = displayText + s + "\n" + Environment.NewLine;
+                }
+                break;
+            case 2:
+                displayText = "";
+                foreach(String s in selected2){
+                    displayText = displayText + s + "\n" + Environment.NewLine;
+                    ;
+                }
+                break;
+            case 3:
+                displayText = "";
+                foreach(String s in selected3){
+                    displayText = displayText + s + "\n" + Environment.NewLine;
+                }
+                break;
+            case 4:
+                displayText = "";
+                foreach (String s in selected4)
+                {
+                    displayText = displayText + s + "\n" + Environment.NewLine;
+                }
+                break;
+            default:
+                displayText = "Route too Long";
+                break;
+        }
+
+        MessageDialog msgbox2 = new MessageDialog(displayText, "Search Results");
+        await msgbox2.ShowAsync();
+        minCount = 5;
+        tree.Clear();
+    
 
         }
 
@@ -44,28 +155,25 @@ namespace BusRouteGuider.ViewModel
             if (current.Equals(end)) {
 
                 String s = "";
-                //Debug.WriteLine(tempRoutes.Count + "*****************************");
                 for (int i = 0; i < tempRoutes.Count; i++) {
 
-                    //Debug.WriteLine("+++++++++++++++++++++++++" + i );
                     if (i != 0) {
                         //Get the ith element from linkedlist tempLocations
                         LinkedListNode<String> _mark = tempLocations.First;
                         for (int p = 0; p < i; p++){
                             _mark = _mark.Next;
                         }               
-                        s = s + " Drop at " + _mark.Value+". ";
+                        s = s + " Drop at " + _mark.Value+" . ";
                     }
                     //Get the ith element from linkedlist tempRoutes
                     LinkedListNode<String> mark = tempRoutes.First;
                     for (int p = 0; p < i; p++){
                             mark = mark.Next;
                     }   
-                    s = s + "Take " + " " + mark.Value + ". ";
+                    s = s + "Take " + " " + mark.Value + " . ";
                 }
 
                 s = s + " Get down at your destination, " + end;
-                //Debug.WriteLine("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" + s );
                 tree.Add(s);
 
             } else {
@@ -140,14 +248,10 @@ namespace BusRouteGuider.ViewModel
 
                             if (isValid) {
                                 foreach (Location loc in route.getRouteIn()) {
-                                   // Debug.WriteLine("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" + routesClone.Count + "  " + locationsClone.Count);
-
                                     findRoutes(start, loc.getName(), end, routesClone, locationsClone, depth - 1);
                                 }
 
                                 foreach (Location loc in route.getRouteOut()) {
-                                   // Debug.WriteLine("SSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS" + routesClone.Count + "  " + locationsClone.Count);
-
                                     findRoutes(start, loc.getName(), end, routesClone, locationsClone, depth - 1);
                                 }
                             }

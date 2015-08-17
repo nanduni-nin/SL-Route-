@@ -112,3 +112,8 @@ C:\Users\Nands\Desktop\SEP\BAckups\BusRouteGuider-v4\BusRouteGuider\BusRouteGuid
 C:\Users\Nands\Desktop\SEP\BAckups\BusRouteGuider-v4\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\qualifiers.txt.intermediate
 C:\Users\Nands\Desktop\SEP\BAckups\BusRouteGuider-v4\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Nands\Desktop\SEP\BAckups\BusRouteGuider-v4\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\ProjectArchitectures.txt
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.WindowsPhone\bin\Debug\View\Map.xbf
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\View\Map.g.i.cs
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\View\Map.g.cs
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\View\Map.xaml
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.WindowsPhone\obj\Debug\View\Map.xbf

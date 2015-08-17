@@ -54,5 +54,15 @@ namespace BusRouteGuider
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+
+        private void TxtBlckHelp_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Help));
+        }
+
+        private void TxtBlckMap_Tapped(object sender, TappedRoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Map));
+        }
     }
 }
