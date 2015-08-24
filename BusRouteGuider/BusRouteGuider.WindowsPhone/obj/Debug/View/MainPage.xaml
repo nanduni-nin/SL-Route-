@@ -14,42 +14,42 @@
             <ColumnDefinition Width="43*"/>
         </Grid.ColumnDefinitions>
 
-        <GridView x:ConnectionId='1' x:Name="StartToDestination" Margin="35,269,43.333,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                         >
+        <GridView x:ConnectionId='1' x:Name="StartToDestination" Margin="35,253,43.333,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                         >
             <Border BorderThickness="2" BorderBrush="White" Height="150" Width="150">
-                <TextBlock x:Name="TxtStartToDestination" Text="Start to Destination" Foreground="White" Margin="14.333,38.333,8.333,8.333" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="23" />
+                <TextBlock x:Name="TxtStartToDestination" Text="Start to Destination" Foreground="White" Margin="14.333,38.333,8.333,8.333" Style="{ThemeResource BaseTextBlockStyle}"  FontSize="23" FontFamily="Segoe WP Semibold" />
             </Border>
         </GridView>
 
 
-        <GridView x:ConnectionId='2' x:Name="CurrentLocationToDestination" Margin="217,269,33,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                                    Grid.ColumnSpan="2">
+        <GridView x:ConnectionId='2' x:Name="CurrentLocationToDestination" Margin="217,253,33,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                                    Grid.ColumnSpan="2">
             <Border BorderThickness="2" BorderBrush="White" Height="150" Width="150">
-                <TextBlock x:Name="TxtCurrentLocationToDestination" Text="Current Location to Destination" Foreground="White" Margin="22.333,38.333,8.333,8.333" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="23" />
+                <TextBlock x:Name="TxtCurrentLocationToDestination" Text="Current Location to Destination" Foreground="White" Margin="22.333,38.333,8.333,8.333" Style="{ThemeResource BaseTextBlockStyle}"  FontSize="23" FontFamily="Segoe WP Semibold" />
             </Border>
         </GridView>
 
-        <GridView x:ConnectionId='3' x:Name="AllRoutes" Margin="35,454,43.333,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                >
+        <GridView x:ConnectionId='3' x:Name="AllRoutes" Margin="35,438,43.333,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                >
             <Border BorderThickness="2" BorderBrush="White" Height="150" Width="150">
-                <TextBlock x:Name="TxtRouteNumber" Text="All Routes" Foreground="White" Margin="22.333,46.333,15.333,56.333" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="23" />
+                <TextBlock x:Name="TxtRouteNumber" Text="All Routes" Foreground="White" Margin="22.333,46.333,15.333,56.333" Style="{ThemeResource BaseTextBlockStyle}"  FontSize="23" FontFamily="Segoe WP Semibold" />
             </Border>
         </GridView>
 
-        <GridView x:ConnectionId='4' x:Name="BusesAtCurrentLocation" Margin="218,454,32,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                              Foreground="#FFF7F7F7" Grid.ColumnSpan="2">
+        <GridView x:ConnectionId='4' x:Name="BusesAtCurrentLocation" Margin="218,438,32,0" Height="150" Width="150" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                                              Foreground="#FFF7F7F7" Grid.ColumnSpan="2">
             <Border BorderThickness="2" BorderBrush="White" Height="150" Width="150">
-                <TextBlock x:Name="TxtBusesAtLocation" Text="Buses at a Location" Foreground="White" Margin="22.333,38.333,15.333,41.333" Style="{ThemeResource BaseTextBlockStyle}" FontFamily="Cambria" FontSize="23" />
+                <TextBlock x:Name="TxtBusesAtLocation" Text="Buses at a Location" Foreground="White" Margin="22.333,38.333,15.333,41.333" Style="{ThemeResource BaseTextBlockStyle}"  FontSize="23" FontFamily="Segoe WP Semibold" />
             </Border>
         </GridView>
 
         <GridView x:ConnectionId='5' x:Name="Menu" Margin="0,0,9.333,0" Height="70" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                            Foreground="#FFFBF7F7">
-            <TextBlock x:Name="TxtBlckMenu" Text="Main Menu" Margin="64.167,25.167,3.167,4.167"  Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="23" Width="136"/>
+            <TextBlock x:Name="TxtBlckMenu" Text="Main Menu" Margin="64.167,25.167,3.167,4.167"  Style="{ThemeResource BaseTextBlockStyle}" Foreground="White"  FontSize="23" Width="136" FontFamily="Segoe UI Semibold"/>
         </GridView>
 
         <GridView x:ConnectionId='6' x:Name="Help" Margin="217,0,0,0" Height="70" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True"                            Grid.ColumnSpan="2">
-            <TextBlock x:Name="TxtBlckHelp" Text="Help" Style="{ThemeResource BaseTextBlockStyle}" Margin="70.333,25.167,31.333,1.5" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="23"/>
+            <TextBlock x:Name="TxtBlckHelp" Text="Help" Style="{ThemeResource BaseTextBlockStyle}" Margin="70.333,25.167,31.333,1.5" Foreground="White"  FontSize="23" FontFamily="Segoe UI Semibold"/>
         </GridView>
 
-        <Image HorizontalAlignment="Left" Height="82" Margin="35,148,0,0" VerticalAlignment="Top" Width="360" Source="ms-appx:///Assets/title.png" Grid.ColumnSpan="2"/>
+        <Image HorizontalAlignment="Center" Height="96" Margin="17,130,8,0" VerticalAlignment="Top" Width="375" Source="ms-appx:///Assets/title.png" Grid.ColumnSpan="2"/>
 
-        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="...Have a Wonderful Journey..." VerticalAlignment="Bottom" Height="31" Width="390" FontSize="26" FontFamily="SimSun" Grid.ColumnSpan="2" Margin="20,0,-10,0"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="...Have a Wonderful Journey..." VerticalAlignment="Bottom" Height="31" Width="390" FontSize="26" FontFamily="SimSun" Grid.ColumnSpan="2" Margin="20,0,-10,16"/>
 
     </Grid>
 </Page>

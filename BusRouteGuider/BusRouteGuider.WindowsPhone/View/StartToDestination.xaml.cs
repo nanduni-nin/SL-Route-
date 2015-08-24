@@ -48,7 +48,7 @@ namespace BusRouteGuider
         private void fillCombo(Dictionary<String,Location> dic)
         {
             //Clear items of the combo lists for clearing any buffers
-            comboStart.Items.Clear();
+            //comboStart.Items.Clear();
             comboEnd.Items.Clear();
 
             //The list of the combo box should appear in alphabetical order
@@ -61,7 +61,7 @@ namespace BusRouteGuider
             
             //Fill the combo boxes
             foreach (String key in keySet){
-                comboStart.Items.Add(key);
+                //comboStart.Items.Add(key);
                 comboEnd.Items.Add(key);
             }
             Debug.WriteLine("Combo filled");
@@ -114,13 +114,13 @@ namespace BusRouteGuider
 
         private async void AllRoutesBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (comboStart.SelectedItem == null || comboEnd.SelectedItem == null)
+            if (textStart.Text == null || comboEnd.SelectedItem == null)
             {
                 MessageDialog msgbox = new MessageDialog("Please fill all the fields.","ERROR");
                 await msgbox.ShowAsync();
                 return;
             }
-            else if ((comboStart.SelectedItem.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+            else if ((textStart.Text.ToString()).Equals(comboEnd.SelectedItem.ToString()))
             {
                 MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination", "ERROR");
                 await msgbox.ShowAsync();
@@ -128,19 +128,19 @@ namespace BusRouteGuider
             }            
             else
             {
-                process.getRoutes(comboStart.SelectedItem.ToString(), comboEnd.SelectedItem.ToString(), dic, true);
+                process.getRoutes(textStart.Text.ToString(), comboEnd.SelectedItem.ToString(), dic, true);
             }
         }
 
         private async void BestRoutesBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (comboStart.SelectedItem == null || comboEnd.SelectedItem == null)
+            if (textStart.Text == null || comboEnd.SelectedItem == null)
             {
                 MessageDialog msgbox = new MessageDialog("Please fill all the fields.", "ERROR");
                 await msgbox.ShowAsync();
                 return;
             }
-            else if ((comboStart.SelectedItem.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+            else if ((textStart.Text.ToString()).Equals(comboEnd.SelectedItem.ToString()))
             {
 
                 MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination", "ERROR");
@@ -149,7 +149,7 @@ namespace BusRouteGuider
             }
             else
             {
-                process.getRoutes(comboStart.SelectedItem.ToString(), comboEnd.SelectedItem.ToString(), dic, false);
+                process.getRoutes(textStart.Text.ToString(), comboEnd.SelectedItem.ToString(), dic, false);
             }
         }
 

@@ -113,6 +113,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\bigIcon.scale-240.jpg" />
+    <Content Include="Assets\bus.jpg" />
     <Content Include="Assets\Capture.scale-100.jpg" />
     <Content Include="Assets\Capture.scale-240.jpg" />
     <Content Include="Assets\Capture2.jpg" />

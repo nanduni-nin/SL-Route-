@@ -21,7 +21,7 @@
         <TextBlock HorizontalAlignment="Left" Margin="66,315,0,0" TextWrapping="Wrap" Text="Please select the location :" VerticalAlignment="Top" Height="48" FontFamily="Global User Interface" FontSize="23" Width="334" />
         <Button x:ConnectionId='3' x:Name="btnSearch" Content="Search" Background="#FF0F897F" Margin="64,560,0,0" VerticalAlignment="Top" Width="142" FontWeight="Bold"                        />
         <Button x:ConnectionId='4' x:Name="btnCancel" Content="Cancel" Background="#FF0F897F" HorizontalAlignment="Left" Margin="244,560,0,0" VerticalAlignment="Top" Width="142" FontWeight="Bold"                        />
-        <ComboBox x:Name="comboLocation" HorizontalAlignment="Left" Margin="64,363,0,0" VerticalAlignment="Top" Width="322"/>
+        <ComboBox x:Name="comboLocation" HorizontalAlignment="Left" Margin="64,363,0,0" PlaceholderText="Select Location" VerticalAlignment="Top" Width="322"/>
         <TextBlock HorizontalAlignment="Left" Margin="34,145,0,0" TextWrapping="Wrap" Text="Find Routes via a Location" VerticalAlignment="Top" Height="48" FontFamily="Cambria" FontSize="30" Width="364" FontWeight="Bold" />
 
     </Grid>

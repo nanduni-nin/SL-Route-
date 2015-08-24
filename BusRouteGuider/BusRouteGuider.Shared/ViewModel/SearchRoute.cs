@@ -29,6 +29,7 @@ namespace BusRouteGuider.ViewModel
             locations = new Dictionary<String, Location>();
             loadData();
             Debug.WriteLine("++++++++++++++++++++++++");
+            
         }
 
 

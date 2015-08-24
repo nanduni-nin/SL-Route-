@@ -96,5 +96,19 @@ namespace BusRouteGuider
             this.Frame.Navigate(typeof(Help));
         }
 
+        private void Menu_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
+
+       
+
+        private void Map_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            this.Frame.Navigate(typeof(Map));
+
+        }
+
     }
 }

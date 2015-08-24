@@ -27,13 +27,11 @@
 
         <Button x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Center" Margin="129,0,136,0" VerticalAlignment="Bottom" Width="135" Click="cancelBtn_Click" Height="54"/>
 
-        <ComboBox x:Name="comboStart" HorizontalAlignment="Left" Margin="60,328,0,0" VerticalAlignment="Top" Width="322" PlaceholderText="Select a location">
-        </ComboBox>
-
         <ComboBox x:Name="comboEnd" HorizontalAlignment="Left" Margin="60,456,0,0" VerticalAlignment="Top" Width="322" PlaceholderText="Select a location">
         </ComboBox>
 
         <TextBlock HorizontalAlignment="Left" Margin="42,149,0,0" TextWrapping="Wrap" Text="Find Routes from Start to Destination" VerticalAlignment="Top" Height="68" FontFamily="Cambria" FontSize="30" Width="342" FontWeight="Bold" />
+        <TextBox x:Name="textStart" HorizontalAlignment="Left" Margin="60,326,0,0" TextWrapping="Wrap" PlaceholderText="Select a location" VerticalAlignment="Top" Width="322"/>
 
     </Grid>
 </Page>

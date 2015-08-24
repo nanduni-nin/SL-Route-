@@ -18,9 +18,9 @@
         <GridView x:Name="Map" Margin="137,6,136,0" Height="66" VerticalAlignment="Top" Background="#FF67C9C1" IsItemClickEnabled="True" Foreground="#FFFBF7F7">
             <TextBlock x:Name="TxtBlckMenu1" Text="Map" Margin="38,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="23" Width="81"/>
         </GridView>
-        <TextBlock HorizontalAlignment="Center" Text="Available Routes" VerticalAlignment="Center" Height="38" FontFamily="Cambria" FontSize="30" Width="257" FontWeight="Bold" Margin="74,82,69,520" />
-        <ListBox x:Name="ListRoutes" HorizontalAlignment="Stretch" Height="472" Margin="0,0,0,48" VerticalAlignment="Bottom" Width="400" FontFamily="Cambria" FontSize="15" FontWeight="Bold">
-        </ListBox>
+        <TextBlock HorizontalAlignment="Center" Text="Available Routes" VerticalAlignment="Top" Height="38" FontFamily="Cambria" FontSize="30" Width="257" FontWeight="Bold" Margin="74,82,69,520" />
+
+        <ListBox x:Name="ListRoutes" HorizontalAlignment="Stretch" ScrollViewer.HorizontalScrollMode="Enabled"  ScrollViewer.HorizontalScrollBarVisibility="Visible" Margin="0,120,0,53" VerticalAlignment="Stretch" Width="400" FontFamily="Cambria" FontSize="15" FontWeight="Bold"/>
         <Button x:ConnectionId='3' x:Name="cancelBtn" Content="Cancel" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="117"                          Height="35"/>
 
     </Grid>
