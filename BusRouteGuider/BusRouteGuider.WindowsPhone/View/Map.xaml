@@ -19,21 +19,13 @@
 
         <Maps:MapControl Name="MyMap"/>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="2,0,31,16" Grid.RowSpan="2">
-            <Button x:Name="getPositionButton" 
-        		Content="Get Position" 
-        		Click="getPositionButton_Click" 
-        		Margin="40,-4,20,-3" />
             <Button x:Name="setPositionButton" 
         		Content="Set Position" 
         		Click="setPositionButton_Click" 
-        		Margin="0,-4,20,-3" />
-        </StackPanel>
+                    HorizontalAlignment="Center"
+        		Grid.Row="1" Grid.RowSpan="2" />
 
-        <TextBlock x:Name="positionTextBlock" 
-			Grid.Row="2"
-			FontSize="22" />
-
+        
         <Slider x:Name="mySlider"
 			Maximum="20" 
 			Minimum="10"

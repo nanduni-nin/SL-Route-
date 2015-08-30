@@ -10,7 +10,7 @@ namespace UnitTestBusRoute
         [TestMethod]
         public void processData()
         {
-            BusRouteGuider.RoutesViaLocation std = new BusRouteGuider.RoutesViaLocation();
+           // BusRouteGuider.RoutesViaLocation std = new BusRouteGuider.RoutesViaLocation();
             int sum = (int)(Math.Abs(3.45));
             Assert.AreEqual(0,sum);
            

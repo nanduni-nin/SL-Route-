@@ -60,7 +60,7 @@ namespace BusRouteGuider
         private void fillCombo(Dictionary<String, Location> dic)
         {
             //Clear items of the combo lists for clearing any buffers
-            comboLocation.Items.Clear();
+            textLoc.Items.Clear();
            
             //The list of the combo box should appear in alphabetical order
             SortedSet<string> keySet = new SortedSet<string>();
@@ -74,7 +74,7 @@ namespace BusRouteGuider
             //Fill the combo boxes
             foreach (String key in keySet)
             {
-                comboLocation.Items.Add(key);
+                textLoc.Items.Add(key);
             }
         }
 
@@ -98,15 +98,38 @@ namespace BusRouteGuider
 
         private async void btnSearch_Click(object sender, RoutedEventArgs e)
         {
-            if (comboLocation.SelectedItem == null)
+            //Validating empty text box
+            if (textLoc.Text == null)
             {
                 MessageDialog msgbox = new MessageDialog("Please fill the fields.","Error");
                 await msgbox.ShowAsync();
                 return;
             }
-            else{
-                process.getBusNumbers(comboLocation.SelectedItem.ToString(), dic);
+           
+             Boolean txt = false;
+
+             //Validating if destination user input town is available in the data file
+             foreach (String key in dic.Keys)
+             {
+                 //Check if start location user input is correct
+                 if (key.Equals(textLoc.Text))
+                 {
+                   txt = true;
+                   break;
+                 }
+             }
+            //Warn the user
+             if (txt == false)
+             {
+                 MessageDialog msgbox = new MessageDialog("Sorry this location is not available.", "ERROR");
+                 await msgbox.ShowAsync();
+                 return;
+            
             }
+            else{
+                process.getBusNumbers(textLoc.Text.ToString(), dic);
+            }
+
         }
 
         private void btnCancel_Click(object sender, RoutedEventArgs e)
@@ -118,6 +141,53 @@ namespace BusRouteGuider
         private void Help_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(Help));
+        }
+
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                // Set a threshold when to start looking for suggestions
+                if (sender.Text.Length >= 1)
+                {
+                    sender.ItemsSource = getSuggestions(sender.Text);
+                }
+                else
+                {
+                    sender.ItemsSource = new List<String> { };
+                }
+            }
+        }
+
+        private object getSuggestions(string p)
+        {
+            //The list of suggestions to display on text box
+            List<String> suggestions = new List<string>();
+
+            //The list of the combo box should appear in alphabetical order
+            SortedSet<string> keySet = new SortedSet<string>();
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in dic.Keys)
+            {
+                keySet.Add(key);
+            }
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in keySet)
+            {
+                //Both user entered string and string to be suggested are converted to lowecase for comparison
+                String entered = p.ToLower();
+                String suggested = key.ToLower();
+
+                //check if user entered text is availble in the suggestions List
+                if (suggested.StartsWith(entered))
+                {
+                    suggestions.Add(key);
+                }
+            }
+
+            return suggestions;
         }
     }
 }

@@ -10,10 +10,10 @@
 
     <Grid>
         <GridView x:ConnectionId='1' Margin="1,6,175,0" Height="66" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True" Foreground="#FFFBF7F7"                           >
-            <TextBlock x:Name="TxtBlckMenu" Text="Menu" Margin="30,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="23" Width="66"/>
+            <TextBlock x:Name="TxtBlckMenu" Margin="90,20,0,0" Text="Menu" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontWeight="Bold" FontSize="23" Width="66"/>
         </GridView>
         <GridView x:ConnectionId='2' Margin="225,6,4,0" Height="66" VerticalAlignment="Top" Background="#FF67C9C1" IsItemClickEnabled="True"                           Foreground="#FFFBF7F7">
-            <TextBlock x:Name="TxtBlckMenu1" Text="Map" Margin="38,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontWeight="Bold" FontFamily="Cambria" FontSize="23" Width="81"/>
+            <TextBlock x:Name="TxtBlckMenu1" Margin="90,20,0,0" Text="Map" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontWeight="Bold" FontSize="23" Width="81"/>
         </GridView>
 
         <Popup x:Name="popUpStartToDest">

@@ -12,7 +12,13 @@ using Windows.UI.Xaml.Controls.Primitives;
 using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
+using System.Diagnostics;
 using Windows.UI.Xaml.Navigation;
+using System.Collections.ObjectModel;
+using Windows.UI.Popups;
+using System.Windows;
+using Windows.Devices.Geolocation;
+
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkID=390556
 
@@ -23,11 +29,19 @@ namespace BusRouteGuider
     /// </summary>
     public sealed partial class CurrentLocationToDestination : Page
     {
+        Dictionary<String, Location> dic;
+        BusRouteGuider.ViewModel.Algorithm process;
+
         public CurrentLocationToDestination()
         {
+            //Navigation achieved
+            Debug.WriteLine("Current Location to destination reached");
+            //Create the GUI
             this.InitializeComponent();
+            //Set functionality for the phone's back buttons
             HardwareButtons.BackPressed += HardwareButtons_BackPressed;
-
+            //Create an object from Algorithm Class
+            process = new ViewModel.Algorithm();
         }
 
         /// <summary>
@@ -37,6 +51,9 @@ namespace BusRouteGuider
         /// This parameter is typically used to configure the page.</param>
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
+            Dictionary<String, Location> dic = e.Parameter as Dictionary<String, Location>;
+            Debug.WriteLine("**********************on navigated to got called");
+            this.dic = dic;
         }
 
         void HardwareButtons_BackPressed(object sender, BackPressedEventArgs e)
@@ -57,6 +74,87 @@ namespace BusRouteGuider
         private void Help_ItemClick(object sender, ItemClickEventArgs e)
         {
             this.Frame.Navigate(typeof(Help));
+        }
+
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                // Set a threshold when to start looking for suggestions
+                if (sender.Text.Length >= 1)
+                {
+                    sender.ItemsSource = getSuggestions(sender.Text);
+                }
+                else
+                {
+                    sender.ItemsSource = new List<String> { };
+                }
+            }
+        }
+
+        private object getSuggestions(string p)
+        {
+            //The list of suggestions to display on text box
+            List<String> suggestions = new List<string>();
+
+            //The list of the combo box should appear in alphabetical order
+            SortedSet<string> keySet = new SortedSet<string>();
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in dic.Keys)
+            {
+                keySet.Add(key);
+            }
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in keySet)
+            {
+                //Both user entered string and string to be suggested are converted to lowecase for comparison
+                String entered = p.ToLower();
+                String suggested = key.ToLower();
+
+                //check if user entered text is availble in the suggestions List
+                if (suggested.StartsWith(entered))
+                {
+                    suggestions.Add(key);
+                }
+            }
+
+            return suggestions;
+        }
+
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            Geolocator geolocator = new Geolocator();
+            if (geolocator.LocationStatus == PositionStatus.Disabled)
+            {
+                MessageDialog msgbox = new MessageDialog("Turn GPS ON", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            
+            
+            
+            Boolean end = false;
+
+             //Validating if destination user input town is available in the data file
+             foreach (String key in dic.Keys)
+             {
+                 //Check if start location user input is correct
+                 if (key.Equals(textLoc.Text))
+                 {
+                   end = true;
+                   break;
+                 }
+             }
+            //Warn the user
+             if (end == false)
+             {
+                 MessageDialog msgbox = new MessageDialog("Sorry this destination is not available.", "ERROR");
+                 await msgbox.ShowAsync();
+                 return;
+             }
         }
 
         

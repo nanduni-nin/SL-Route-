@@ -112,11 +112,13 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\banner.PNG" />
     <Content Include="Assets\bigIcon.scale-240.jpg" />
-    <Content Include="Assets\bus.jpg" />
+    <Content Include="Assets\bus.PNG" />
     <Content Include="Assets\Capture.scale-100.jpg" />
     <Content Include="Assets\Capture.scale-240.jpg" />
     <Content Include="Assets\Capture2.jpg" />
+    <Content Include="Assets\img.png" />
     <Content Include="Assets\log.scale-240.jpg" />
     <Content Include="Assets\logo.jpg" />
     <Content Include="Assets\menulog.jpg" />

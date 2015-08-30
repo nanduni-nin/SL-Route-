@@ -44,29 +44,7 @@ namespace BusRouteGuider
             process = new ViewModel.Algorithm();
         }
 
-        //Fill the combo boxes for start location and destination
-        private void fillCombo(Dictionary<String,Location> dic)
-        {
-            //Clear items of the combo lists for clearing any buffers
-            //comboStart.Items.Clear();
-            comboEnd.Items.Clear();
-
-            //The list of the combo box should appear in alphabetical order
-            SortedSet<string> keySet = new SortedSet<string>();
-
-            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
-            foreach (String key in dic.Keys){
-                keySet.Add(key);
-            }
-            
-            //Fill the combo boxes
-            foreach (String key in keySet){
-                //comboStart.Items.Add(key);
-                comboEnd.Items.Add(key);
-            }
-            Debug.WriteLine("Combo filled");
-           
-        }
+        
 
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
@@ -78,7 +56,6 @@ namespace BusRouteGuider
             Dictionary<String, Location> dic = e.Parameter as Dictionary<String, Location>;
             Debug.WriteLine("**********************on navigated to got called");
             this.dic = dic;
-            this.fillCombo(dic);
         }
 
         //Set the functionality for the phone's back button to move one page back
@@ -114,33 +91,79 @@ namespace BusRouteGuider
 
         private async void AllRoutesBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (textStart.Text == null || comboEnd.SelectedItem == null)
+            Boolean start = false;
+            Boolean end = false;
+
+            //Validating if start location user input town is available in the data file
+            foreach (String key in dic.Keys) {
+                //Check if start location user input is correct
+                if (key.Equals(textStart.Text)) {
+                    start = true;
+                    break;
+                }
+            }
+
+            //Validating if destination user input town is available in the data file
+            foreach (String key in dic.Keys)
+            {
+                //Check if start location user input is correct
+                if (key.Equals(textEnd.Text))
+                {
+                    end = true;
+                    break;
+                }
+            }
+
+            //Warn the user
+            if (start == false && end == false){
+                MessageDialog msgbox = new MessageDialog("Sorry the start location and destination are not available.", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            if (start == false){
+                MessageDialog msgbox = new MessageDialog("Sorry this start location is not available.", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            if (end == false) {
+                MessageDialog msgbox = new MessageDialog("Sorry this destination is not available.", "ERROR");
+                await msgbox.ShowAsync();
+                return;
+            }
+            
+
+            //Validating if text boxes are not empty
+            if (textStart.Text == null || textEnd.Text == null)
             {
                 MessageDialog msgbox = new MessageDialog("Please fill all the fields.","ERROR");
                 await msgbox.ShowAsync();
                 return;
             }
-            else if ((textStart.Text.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+
+            //Validating if two locations on the two text boxes are the same
+            else if ((textStart.Text.ToString()).Equals(textEnd.Text.ToString()))
             {
                 MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination", "ERROR");
                 await msgbox.ShowAsync();
                 return;
-            }            
+            }  
+
+            //Validations are OK
             else
             {
-                process.getRoutes(textStart.Text.ToString(), comboEnd.SelectedItem.ToString(), dic, true);
+                process.getRoutes(textStart.Text.ToString(), textEnd.Text.ToString(), dic, true);
             }
         }
 
         private async void BestRoutesBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (textStart.Text == null || comboEnd.SelectedItem == null)
+            if (textStart.Text == null || textEnd.Text == null)
             {
                 MessageDialog msgbox = new MessageDialog("Please fill all the fields.", "ERROR");
                 await msgbox.ShowAsync();
                 return;
             }
-            else if ((textStart.Text.ToString()).Equals(comboEnd.SelectedItem.ToString()))
+            else if ((textStart.Text.ToString()).Equals(textEnd.Text.ToString()))
             {
 
                 MessageDialog msgbox = new MessageDialog("Enter different locations for Start and Destination", "ERROR");
@@ -149,9 +172,58 @@ namespace BusRouteGuider
             }
             else
             {
-                process.getRoutes(textStart.Text.ToString(), comboEnd.SelectedItem.ToString(), dic, false);
+                process.getRoutes(textStart.Text.ToString(), textEnd.Text.ToString(), dic, false);
             }
         }
+
+        private void AutoSuggestBox_TextChanged(AutoSuggestBox sender, AutoSuggestBoxTextChangedEventArgs args)
+        {
+            if (args.Reason == AutoSuggestionBoxTextChangeReason.UserInput)
+            {
+                // Set a threshold when to start looking for suggestions
+                if (sender.Text.Length >= 1)
+                {
+                    sender.ItemsSource = getSuggestions(sender.Text);
+                }
+                else
+                {
+                    sender.ItemsSource = new List<String> { };
+                }
+            }
+        }
+
+        private object getSuggestions(string p)
+        {
+            //The list of suggestions to display on text box
+            List<String> suggestions = new List<string>();
+            
+            //The list of the combo box should appear in alphabetical order
+            SortedSet<string> keySet = new SortedSet<string>();
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in dic.Keys)
+            {
+                keySet.Add(key);
+            }
+
+            //Add elements from dictionary into the sorted set which conains elements in alphebetical order
+            foreach (String key in keySet)
+            {
+                //Both user entered string and string to be suggested are converted to lowecase for comparison
+                String entered = p.ToLower();
+                String suggested = key.ToLower();
+
+                //check if user entered text is availble in the suggestions List
+                if (suggested.StartsWith(entered))
+                {
+                    suggestions.Add(key);
+                }
+            }          
+
+            return suggestions;
+        }
+
+       
 
         
     }

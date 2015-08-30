@@ -54,7 +54,7 @@ namespace BusRouteGuider
 
         private void CurrentLocationToDestination_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(CurrentLocationToDestination));
+            this.Frame.Navigate(typeof(CurrentLocationToDestination),dic);
         }
 
         private void BusesAtCurrentLocation_ItemClick(object sender, ItemClickEventArgs e)
@@ -74,7 +74,7 @@ namespace BusRouteGuider
 
         private void Menu_ItemClick(object sender, ItemClickEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
+            this.Frame.Navigate(typeof(Map));
         }
        
 

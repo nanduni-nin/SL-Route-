@@ -589,7 +589,3 @@ namespace BusRouteGuider.BusRouteGuider_Windows_XamlTypeInfo
 }
 
 
-
-
-
-
