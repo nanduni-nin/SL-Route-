@@ -6,91 +6,63 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>23722ab4-8d9a-4eaa-966b-5d41f4922800</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\obj\x86\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>C6B748E5E236EB1553B7E977A806E0B72C05D4D6369F84F77FF798688EA3A6CD</RegisteredManifestChecksum>
-    <RegisteredPackageMoniker>23722ab4-8d9a-4eaa-966b-5d41f4922800_1.0.0.0_x86__zasbnm2xyx202</RegisteredPackageMoniker>
-    <RegisteredUserModeAppID>23722ab4-8d9a-4eaa-966b-5d41f4922800_zasbnm2xyx202!App</RegisteredUserModeAppID>
-    <RegisteredPackageID>23722ab4-8d9a-4eaa-966b-5d41f4922800</RegisteredPackageID>
+    <PackageIdentityName>29aed387-d7ad-407c-ba52-27adbb685f8a</PackageIdentityName>
+    <IntermediateOutputPath>c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\obj\x86\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>4775EEEF5D7F2279F7ECC6C7D0EE56ABE7D46DF71210CF16B376380A68A6C23D</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>29aed387-d7ad-407c-ba52-27adbb685f8a_1.0.0.0_x86__zasbnm2xyx202</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>29aed387-d7ad-407c-ba52-27adbb685f8a_zasbnm2xyx202!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>29aed387-d7ad-407c-ba52-27adbb685f8a</RegisteredPackageID>
     <RegisteredPackagePublisher>CN=Nands</RegisteredPackagePublisher>
     <RegisteredVersion>1.0.0.0</RegisteredVersion>
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\AppxManifest.xml">
+    <AppXManifest Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2015-07-25T14:51:03.530</Modified>
+      <Modified>2015-08-30T08:48:58.393</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.exe">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.exe">
       <PackagePath>BusRouteGuider.Windows.exe</PackagePath>
-      <Modified>2015-07-25T15:04:26.391</Modified>
+      <Modified>2015-08-30T08:48:58.101</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T17:55:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T17:55:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T17:55:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2014-03-14T17:55:28.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\title.png">
-      <PackagePath>Assets\title.png</PackagePath>
-      <Modified>2015-07-21T03:21:10.133</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Shared\data.txt">
-      <PackagePath>data.txt</PackagePath>
-      <Modified>2015-07-25T00:05:57.126</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.335</Modified>
+      <Modified>2015-08-30T08:48:57.920</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\AllRoutes.xbf">
-      <PackagePath>View\AllRoutes.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.338</Modified>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2015-08-30T08:48:57.922</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\CurrentLocationToDestination.xbf">
-      <PackagePath>View\CurrentLocationToDestination.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.341</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\Help.xbf">
-      <PackagePath>View\Help.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.343</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\MainPage.xbf">
-      <PackagePath>View\MainPage.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.345</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\RoutesAtLocation.xbf">
-      <PackagePath>View\RoutesAtLocation.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.347</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\StartToDestination.xbf">
-      <PackagePath>View\StartToDestination.xbf</PackagePath>
-      <Modified>2015-07-25T14:51:02.350</Modified>
-    </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.xr.xml">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.xr.xml">
       <PackagePath>BusRouteGuider.Windows.xr.xml</PackagePath>
-      <Modified>2015-07-25T14:51:01.718</Modified>
+      <Modified>2015-08-30T08:48:57.870</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2015-07-25T14:51:03.000</Modified>
+      <Modified>2015-08-30T08:48:58.237</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

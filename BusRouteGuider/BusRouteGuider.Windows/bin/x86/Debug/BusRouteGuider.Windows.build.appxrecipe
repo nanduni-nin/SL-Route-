@@ -6,66 +6,78 @@
     <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
-    <PackageIdentityName>23722ab4-8d9a-4eaa-966b-5d41f4922800</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\obj\x86\Debug\</IntermediateOutputPath>
+    <PackageIdentityName>29aed387-d7ad-407c-ba52-27adbb685f8a</PackageIdentityName>
+    <IntermediateOutputPath>c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\AppxManifest.xml">
+    <AppXManifest Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.exe">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.exe">
       <PackagePath>BusRouteGuider.Windows.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\Logo.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\bus route map sri lanka.jpg">
+      <PackagePath>Assets\bus route map sri lanka.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\bus.jpg">
+      <PackagePath>Assets\bus.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\images.jpg">
+      <PackagePath>Assets\images.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\Logo.scale-100.png">
       <PackagePath>Assets\Logo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SmallLogo.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SmallLogo.scale-100.png">
       <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SplashScreen.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\SplashScreen.scale-100.png">
       <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\StoreLogo.scale-100.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\StoreLogo.scale-100.png">
       <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\title.png">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\Assets\title.png">
       <PackagePath>Assets\title.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Shared\data.txt">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Shared\data.txt">
       <PackagePath>data.txt</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\App.xbf">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\AllRoutes.xbf">
-      <PackagePath>View\AllRoutes.xbf</PackagePath>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\AllRoutes.xbf">
+      <PackagePath>AllRoutes.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\CurrentLocationToDestination.xbf">
-      <PackagePath>View\CurrentLocationToDestination.xbf</PackagePath>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\CurrentLocationToDestination.xbf">
+      <PackagePath>CurrentLocationToDestination.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\Help.xbf">
-      <PackagePath>View\Help.xbf</PackagePath>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\Help.xbf">
+      <PackagePath>Help.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\MainPage.xbf">
-      <PackagePath>View\MainPage.xbf</PackagePath>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\RoutesAtLocation.xbf">
-      <PackagePath>View\RoutesAtLocation.xbf</PackagePath>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\Map.xbf">
+      <PackagePath>Map.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\View\StartToDestination.xbf">
-      <PackagePath>View\StartToDestination.xbf</PackagePath>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\RoutesAtLocation.xbf">
+      <PackagePath>RoutesAtLocation.xbf</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.xr.xml">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\StartToDestination.xbf">
+      <PackagePath>StartToDestination.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\BusRouteGuider.Windows.xr.xml">
       <PackagePath>BusRouteGuider.Windows.xr.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="c:\users\nands\documents\visual studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.Windows\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

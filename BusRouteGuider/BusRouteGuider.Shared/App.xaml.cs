@@ -21,7 +21,7 @@ using Windows.UI.Xaml.Navigation;
 namespace BusRouteGuider
 {
     /// <summary>
-    /// Provides application-specific behavior to subackpplement the default Application class.
+    /// Provides application-specific behavior to supplement the default Application class.
     /// </summary>
     public sealed partial class App : Application
     {
@@ -133,7 +133,5 @@ namespace BusRouteGuider
             // TODO: Save application state and stop any background activity
             deferral.Complete();
         }
-
-
     }
 }

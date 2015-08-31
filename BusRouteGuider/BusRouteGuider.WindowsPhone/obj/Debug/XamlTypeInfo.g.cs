@@ -125,25 +125,25 @@ namespace BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo
         private void InitTypeTables()
         {
             _typeNameTable = new string[9];
-            _typeNameTable[0] = "BusRouteGuider.Map";
+            _typeNameTable[0] = "BusRouteGuider.CurrentLocationToDestination";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
-            _typeNameTable[3] = "BusRouteGuider.ShowRoutes";
-            _typeNameTable[4] = "BusRouteGuider.RoutesViaLocation";
-            _typeNameTable[5] = "BusRouteGuider.Help";
-            _typeNameTable[6] = "BusRouteGuider.CurrentLocationToDestination";
-            _typeNameTable[7] = "BusRouteGuider.MainPage";
+            _typeNameTable[3] = "BusRouteGuider.Help";
+            _typeNameTable[4] = "BusRouteGuider.MainPage";
+            _typeNameTable[5] = "BusRouteGuider.Map";
+            _typeNameTable[6] = "BusRouteGuider.RoutesViaLocation";
+            _typeNameTable[7] = "BusRouteGuider.ShowRoutes";
             _typeNameTable[8] = "BusRouteGuider.StartToDestination";
 
             _typeTable = new global::System.Type[9];
-            _typeTable[0] = typeof(global::BusRouteGuider.Map);
+            _typeTable[0] = typeof(global::BusRouteGuider.CurrentLocationToDestination);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
-            _typeTable[3] = typeof(global::BusRouteGuider.ShowRoutes);
-            _typeTable[4] = typeof(global::BusRouteGuider.RoutesViaLocation);
-            _typeTable[5] = typeof(global::BusRouteGuider.Help);
-            _typeTable[6] = typeof(global::BusRouteGuider.CurrentLocationToDestination);
-            _typeTable[7] = typeof(global::BusRouteGuider.MainPage);
+            _typeTable[3] = typeof(global::BusRouteGuider.Help);
+            _typeTable[4] = typeof(global::BusRouteGuider.MainPage);
+            _typeTable[5] = typeof(global::BusRouteGuider.Map);
+            _typeTable[6] = typeof(global::BusRouteGuider.RoutesViaLocation);
+            _typeTable[7] = typeof(global::BusRouteGuider.ShowRoutes);
             _typeTable[8] = typeof(global::BusRouteGuider.StartToDestination);
         }
 
@@ -179,12 +179,12 @@ namespace BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo
             return -1;
         }
 
-        private object Activate_0_Map() { return new global::BusRouteGuider.Map(); }
-        private object Activate_3_ShowRoutes() { return new global::BusRouteGuider.ShowRoutes(); }
-        private object Activate_4_RoutesViaLocation() { return new global::BusRouteGuider.RoutesViaLocation(); }
-        private object Activate_5_Help() { return new global::BusRouteGuider.Help(); }
-        private object Activate_6_CurrentLocationToDestination() { return new global::BusRouteGuider.CurrentLocationToDestination(); }
-        private object Activate_7_MainPage() { return new global::BusRouteGuider.MainPage(); }
+        private object Activate_0_CurrentLocationToDestination() { return new global::BusRouteGuider.CurrentLocationToDestination(); }
+        private object Activate_3_Help() { return new global::BusRouteGuider.Help(); }
+        private object Activate_4_MainPage() { return new global::BusRouteGuider.MainPage(); }
+        private object Activate_5_Map() { return new global::BusRouteGuider.Map(); }
+        private object Activate_6_RoutesViaLocation() { return new global::BusRouteGuider.RoutesViaLocation(); }
+        private object Activate_7_ShowRoutes() { return new global::BusRouteGuider.ShowRoutes(); }
         private object Activate_8_StartToDestination() { return new global::BusRouteGuider.StartToDestination(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
@@ -197,9 +197,9 @@ namespace BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo
             switch (typeIndex)
             {
 
-            case 0:   //  BusRouteGuider.Map
+            case 0:   //  BusRouteGuider.CurrentLocationToDestination
                 userType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_0_Map;
+                userType.Activator = Activate_0_CurrentLocationToDestination;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
@@ -212,37 +212,37 @@ namespace BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo
                 xamlType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
-            case 3:   //  BusRouteGuider.ShowRoutes
+            case 3:   //  BusRouteGuider.Help
                 userType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_3_ShowRoutes;
+                userType.Activator = Activate_3_Help;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 4:   //  BusRouteGuider.RoutesViaLocation
+            case 4:   //  BusRouteGuider.MainPage
                 userType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_4_RoutesViaLocation;
+                userType.Activator = Activate_4_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 5:   //  BusRouteGuider.Help
+            case 5:   //  BusRouteGuider.Map
                 userType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_Help;
+                userType.Activator = Activate_5_Map;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  BusRouteGuider.CurrentLocationToDestination
+            case 6:   //  BusRouteGuider.RoutesViaLocation
                 userType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_CurrentLocationToDestination;
+                userType.Activator = Activate_6_RoutesViaLocation;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  BusRouteGuider.MainPage
+            case 7:   //  BusRouteGuider.ShowRoutes
                 userType = new global::BusRouteGuider.BusRouteGuider_WindowsPhone_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_MainPage;
+                userType.Activator = Activate_7_ShowRoutes;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

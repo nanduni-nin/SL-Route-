@@ -12,13 +12,13 @@
 
     <Grid>
         <GridView x:Name="Menu" Margin="1,6,272,0" Height="66" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True" Foreground="#FFFBF7F7" ItemClick="Menu_ItemClick" ToolTipService.ToolTip="Back to Main Page" >
-            <TextBlock x:Name="TxtBlckMenu" Text="Menu" Margin="30,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="23" Width="66" FontWeight="Bold"/>
+            <TextBlock x:Name="TxtBlckMenu" Text="Menu" Margin="30,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="23" Width="66"/>
         </GridView>
         <GridView x:Name="Help" Margin="272,6,1,0" Height="66" VerticalAlignment="Top" Background="#FF0F897F" IsItemClickEnabled="True" ToolTipService.ToolTip="Need Help?">
-            <TextBlock x:Name="TxtBlckHelp" Text="Help" Style="{ThemeResource BaseTextBlockStyle}" Margin="69.333,3,4.333,1.5" Width="50" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="23" FontWeight="Bold"/>
+            <TextBlock x:Name="TxtBlckHelp" Text="Help" Style="{ThemeResource BaseTextBlockStyle}" Margin="69.333,3,4.333,1.5" Width="50" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="23"/>
         </GridView>
         <GridView x:Name="Map" Margin="137,6,136,0" Height="66" VerticalAlignment="Top" Background="#FF67C9C1" IsItemClickEnabled="True" ItemClick="Map_ItemClick" Foreground="#FFFBF7F7" ToolTipService.ToolTip="View the Map" FontFamily="Segoe UI Semibold">
-            <TextBlock x:Name="TxtBlckMap" Text="Map" Margin="38,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="23" Width="81" FontWeight="Bold" />
+            <TextBlock x:Name="TxtBlckMap" Text="Map" Margin="38,3,2,10" Style="{ThemeResource BaseTextBlockStyle}" Foreground="White" FontFamily="Segoe UI Semibold" FontSize="23" Width="81" />
         </GridView>
         <TextBlock HorizontalAlignment="Left" Margin="60,290,0,0" TextWrapping="Wrap" Text="Start Location:" VerticalAlignment="Top" Height="48" FontFamily="Global User Interface" FontSize="23" FontStyle="Italic" />
         <TextBlock HorizontalAlignment="Left" Margin="60,413,0,0" TextWrapping="Wrap" Text="Destination:" VerticalAlignment="Top" Height="48" FontFamily="Global User Interface" FontSize="23" FontStyle="Italic" />

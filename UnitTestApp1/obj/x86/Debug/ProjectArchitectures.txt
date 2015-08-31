@@ -1,0 +1,2 @@
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\BusRouteGuider\BusRouteGuider.WindowsPhone\BusRouteGuider.WindowsPhone.csproj;neutral
+C:\Users\Nands\Documents\Visual Studio 2013\Projects\BusRouteGuider\UnitTestApp1\UnitTestsBusRouteGuider.csproj;x86

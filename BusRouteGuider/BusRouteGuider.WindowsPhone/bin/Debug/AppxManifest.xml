@@ -29,7 +29,10 @@
             <m3:ShowOn Tile="square150x150Logo" />
           </m3:ShowNameOnTiles>
         </m3:DefaultTile>
-        <m3:SplashScreen Image="Assets\Capture.jpg" />
+        <m3:InitialRotationPreference>
+          <m3:Rotation Preference="portrait" />
+        </m3:InitialRotationPreference>
+        <m3:SplashScreen Image="Assets\SplashScreen.jpg" />
       </m3:VisualElements>
     </Application>
   </Applications>
@@ -38,14 +41,14 @@
     <DeviceCapability Name="location" />
   </Capabilities>
   <build:Metadata>
-    <build:Item Name="SharedGUID" Value="cda3236a-8d86-4fa0-9410-a465549905fe" />
+    <build:Item Name="SharedGUID" Value="2dac625e-497b-4133-96a0-ba74dc21a128" />
     <build:Item Name="CodeSharingProject" Value="248F659F-DAC5-46E8-AC09-60EC9FC95053" />
     <build:Item Name="TargetFrameworkMoniker" Value="WindowsPhoneApp,Version=v8.1" />
     <build:Item Name="VisualStudio" Version="12.0" />
     <build:Item Name="VisualStudioEdition" Value="Microsoft Visual Studio Community 2013" />
     <build:Item Name="OperatingSystem" Version="6.3.9600.16384 (winblue_rtm.130821-1623)" />
     <build:Item Name="Microsoft.Build.AppxPackage.dll" Version="12.0.31101.0" />
-    <build:Item Name="ProjectGUID" Value="{C70B4818-A9ED-4842-B8C4-3A783B876F6E}" />
+    <build:Item Name="ProjectGUID" Value="{40D0BD4E-AAC9-4685-AB56-D6E4493C525C}" />
     <build:Item Name="Microsoft.Windows.UI.Xaml.Build.Tasks.dll" Version="12.0.30501.0" />
     <build:Item Name="MakePri.exe" Version="6.3.9600.17298 (winblue.141024-1500)" />
   </build:Metadata>

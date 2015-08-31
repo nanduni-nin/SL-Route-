@@ -63,11 +63,6 @@ namespace BusRouteGuider.ViewModel
                 if (!routes.ContainsKey(temp[0]))
                 {
                     routes.Add(temp[0], route);
-                   // Debug.WriteLine("added "+temp[0]);
-                }
-                else
-                {
-                   // Debug.WriteLine("not"+ temp[0]);
                 }
             }
 
@@ -75,7 +70,7 @@ namespace BusRouteGuider.ViewModel
 
              
         //Add the data into the data structures
-        private static Route processInput(String temp, Route route) {
+        public static Route processInput(String temp, Route route) {
             Location location = null;
             String[] tempLocations = temp.Split(',');
 

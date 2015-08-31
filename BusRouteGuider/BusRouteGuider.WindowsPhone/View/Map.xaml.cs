@@ -78,7 +78,7 @@ namespace BusRouteGuider
             }
             catch (Exception ex)
             {
-                //exception
+                Debug.WriteLine(ex);
             }        
 
             
