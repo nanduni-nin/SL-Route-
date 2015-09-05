@@ -22,13 +22,19 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="BusRouteGuider.Windows.exe" EntryPoint="BusRouteGuider.Windows.App">
-      <m2:VisualElements DisplayName="BusRouteGuider.Windows" Square150x150Logo="Assets\Logo.png" Square30x30Logo="Assets\SmallLogo.png" Description="BusRouteGuider.Windows" ForegroundText="light" BackgroundColor="#464646">
-        <m2:SplashScreen Image="Assets\SplashScreen.png" />
+      <m2:VisualElements DisplayName="BusRouteGuider.Windows" Square150x150Logo="Assets\Square150x150Logo.jpg" Square30x30Logo="Assets\SmallLogo.png" Description="BusRouteGuider.Windows" ForegroundText="light" BackgroundColor="#464646">
+        <m2:DefaultTile Square70x70Logo="Assets\Square70x70Logo.png">
+          <m2:ShowNameOnTiles>
+            <m2:ShowOn Tile="square150x150Logo" />
+          </m2:ShowNameOnTiles>
+        </m2:DefaultTile>
+        <m2:SplashScreen Image="Assets\SplashScreen.jpg" />
       </m2:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <DeviceCapability Name="location" />
   </Capabilities>
   <build:Metadata>
     <build:Item Name="SharedGUID" Value="2dac625e-497b-4133-96a0-ba74dc21a128" />
